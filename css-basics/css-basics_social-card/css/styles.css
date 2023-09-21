@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 2px;
+  padding: px;
+}
+
+.profile-pic {
+  border-radius: 10px;
+}
+
+.account-text {
+  color: rgb(160, 159, 159);
+  margin: 2px;
+}
+
+.arrow {
+  color: rgb(105, 190, 247);
+  outline: none;
+  background-color: white;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.title {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
