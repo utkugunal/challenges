@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-granite: rgb(37 38 41);
+  --color-nemo: rgb(255 74 17);
+  --color-foam: rgb(255 255 255);
+  --border-main: 4px;
+  --spacing-main: 0.025em;
+  --big-space: 16px;
+  --mid-space: 10px;
+  --small-space: 8px;
+}
+
 body {
   margin: 0;
   font-family: system-ui;
@@ -11,32 +22,32 @@ body {
 }
 
 header {
-  background: rgb(37 38 41 / 100%);
+  background: var(--color-granite);
 }
 
 h1 {
   text-align: center;
-  color: white;
+  color: var(--color-foam);
   line-height: 1.4;
   margin: 0;
-  letter-spacing: 0.025em;
+  letter-spacing: var(--spacing-main);
   text-transform: uppercase;
-  padding-block: 16px;
+  padding-block: var(--big-space);
 }
 
 h2 {
-  letter-spacing: 0.025em;
+  letter-spacing: var(--spacing-main);
 }
 
 strong {
-  color: #ff4a11;
+  color: var(--color-nemo);
 }
 
 section {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
-  padding: 16px;
+  padding: var(--big-space);
   width: min(1000px, 100%);
   margin: 0 auto;
 }
@@ -54,46 +65,46 @@ figure {
   width: min(100%, 400px);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--mid-space);
   margin: 0;
-  padding: 10px;
-  background-color: #ff4a11ff;
-  border-radius: 4px;
+  padding: var(--mid-space);
+  background-color: var(--color-nemo);
+  border-radius: var(--border-main);
 }
 
 figcaption {
-  color: rgb(255 255 255);
+  color: var(--color-foam);
 }
 
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 16px;
+  gap: var(--small-space) var(--big-space);
 }
 
 a {
   display: inline-block;
   font-size: smaller;
-  padding: 8px;
-  border-radius: 4px;
-  background-color: hsl(14 100% 53%);
-  color: #fff;
+  padding: var(--small-space);
+  border-radius: var(--border-main);
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
 }
 
 a:hover,
 a:focus-visible {
-  background-color: rgb(37 38 41);
+  background-color: var(--color-granite);
   text-decoration: none;
 }
 
 mark {
-  background-color: rgb(255 74 17);
-  color: #ffffff;
-  border-radius: 4px;
-  letter-spacing: 0.025em;
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
+  border-radius: var(--border-main);
+  letter-spacing: var(--spacing-main);
 }
 
 ::selection {
-  background-color: #252629;
-  color: #ff4a11;
+  background-color: var(--color-granite);
+  color: var(--color-nemo);
 }
