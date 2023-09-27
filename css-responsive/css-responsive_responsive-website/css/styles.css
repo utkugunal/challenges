@@ -248,6 +248,7 @@ width, etc. */
   .card-section {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .product-card,
@@ -256,6 +257,8 @@ width, etc. */
   }
 }
 
+/* Media Query Desktop */
+/* --- */
 @media (min-width: 1200px) {
   .--forest {
     min-width: 100%;
@@ -274,8 +277,4 @@ width, etc. */
     align-self: flex-start;
   }
 }
-
-/* Media Query Desktop */
-/* --- */
-/* Replace this comment with your media query. */
 /* --- */
