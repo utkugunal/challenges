@@ -17,5 +17,5 @@ form.addEventListener("submit", (event) => {
   console.log(complaint);
 
   event.target.elements.firstName.focus();
-  // event.target.reset();
+  event.target.reset();
 });
