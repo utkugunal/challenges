@@ -1,6 +1,6 @@
 console.clear();
 
-//handleUserlogin is our higher order function. we define a function with 3 parameters, and 2 of them are already functions.
+//handleUserlogin is our higher order function. we define a function with 3 parameters, and 2 of them are already another functions.
 function handleUserLogin(onSuccess, onError, userName) {
   if (userName === "Jane Doe") {
     onSuccess(userName, "admin"); // this function has 2 arguments.
