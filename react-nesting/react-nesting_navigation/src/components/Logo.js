@@ -1,7 +1,7 @@
-import Image from "./components/Image";
-import logo from "./img/logo.jpg";
+import Image from "../components/Image";
+import logo from "../img/logo.jpg";
 
-export default function Logo({ children }) {
+export default function Logo() {
   return (
     <a href="#">
       <Image src={logo} alt="logo" />
