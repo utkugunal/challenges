@@ -21,22 +21,24 @@ export default function StatusCheck() {
      * is okay and false if it is not.
      **/
     // --v-- write your code here --v--
-    const response = await fetch(apiStatusUrl);
+    setStatusIcon("⏳");
 
-    console.log(response);
-    console.log(response.ok);
-    // const data = await response.json();
+    try {
+      const response = await fetch(apiStatusUrl);
 
-    if (!response) {
-      setStatusIcon("⏳");
-    } else {
+      console.log(response);
+      console.log(response.ok);
+      // const data = await response.json();
+
       if (response.ok) {
         setStatusIcon("✅");
       } else {
         setStatusIcon("❌");
       }
+    } catch (error) {
+      console.error("Error checking API status:", error);
+      setStatusIcon("🚨");
     }
-
     // --^-- write your code here --^--
   }
 
