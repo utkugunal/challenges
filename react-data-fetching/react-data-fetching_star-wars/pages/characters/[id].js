@@ -11,13 +11,13 @@ export default function Character() {
       console.log(res);
       return res.json();
     });
-  const { data, error, loading } = useSWR(
+  const { data, error, isLoading } = useSWR(
     `https://swapi.dev/api/people/${id}`,
     fetcher
   );
   console.log(data);
   if (error) return <div>{error.message}</div>;
-  if (loading) return <div>loading...</div>;
+  if (isLoading) return <div>loading...</div>;
 
   return (
     <Layout>
