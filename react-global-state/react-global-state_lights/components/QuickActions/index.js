@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Button from "../Button";
-import { useEffect, useState } from "react";
 
 const StyledQuickActions = styled.div`
   display: flex;
@@ -8,20 +7,7 @@ const StyledQuickActions = styled.div`
   gap: 16px;
 `;
 
-export default function QuickActions({ handleAllOn, handleAllOff }) {
-  // rooms was added as prop above...
-  // const [areAllLightsOn, setAreAllLightsOn] = useState(false);
-  // const [areAllLightsOff, setAreAllLightsOff] = useState(false);
-
-  // useEffect(() => {
-  //   if (rooms.every((room) => room.isOn)) {
-  //     setAreAllLightsOn(true);
-  //   }
-  //   if (rooms.every((room) => !room.isOn)) {
-  //     setAreAllLightsOff(true);
-  //   }
-  // }, [rooms]);
-
+export default function QuickActions({ handleAllOn, handleAllOff, rooms }) {
   return (
     <StyledQuickActions>
       <Button
@@ -29,7 +15,7 @@ export default function QuickActions({ handleAllOn, handleAllOff }) {
         onClick={() => {
           handleAllOff();
         }}
-        // disabled={areAllLightsOff}
+        disabled={rooms.every((room) => !room.isOn)}
       >
         Turn all lights off
       </Button>
@@ -38,7 +24,7 @@ export default function QuickActions({ handleAllOn, handleAllOff }) {
         onClick={() => {
           handleAllOn();
         }}
-        // disabled={areAllLightsOn}
+        disabled={rooms.every((room) => room.isOn)}
       >
         Turn all lights on
       </Button>

@@ -27,6 +27,12 @@ const Content = styled.div`
 `;
 
 export default function Layout({ children, isDimmed }) {
+  // const [isDimmed, setIsDimmed] = useState(false);
+
+  // if (rooms.every((room) => !room.isOn)) {
+  //   setIsDimmed(true);
+  // }
+
   return (
     <StyledLayout>
       <Background $isDimmed={isDimmed}>
