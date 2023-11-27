@@ -6,7 +6,10 @@ function Card({ user }) {
     <article className="card">
       <h2>{user.name}</h2>
       <ul className="card__taglist">
-        <Tag tag={user.roles[0]} />
+        {/* <Tag tag={user.roles[0]} /> */}
+        {user.roles.map((tag) => (
+          <Tag tag={tag} key={tag} />
+        ))}
       </ul>
       <p>{user.about}</p>
       <Button>edit</Button>
